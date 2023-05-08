@@ -3,8 +3,8 @@ import logo from "../assets/logo.svg";
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-b from-[#FFBE7B] to-[#EED971] h-full w-full">
-      <div className=" bg-[#FFA351] flex">
+    <div className="bg-gradient-to-b from-[#201E20] to-[#E0A96D] h-full w-full">
+      <div className=" bg-[#E0A96D] flex ">
         <div id="image" className="flex items-center ml-5   ">
           <img className="w-32" src={logo} alt="logo" />
           <h1 className="px-10 font-bold font-serif text-4xl">
@@ -52,7 +52,7 @@ const Home = () => {
 
             </ol>
         </div>
-        <div className="flex-col justify-center mx-12 bg-[#FFA351] rounded-md my-10 h-4/5 px-10 py-10 w-2/3">
+        <div className="flex-col justify-center mx-12 bg-[#DDC3A5] rounded-md my-10 h-4/5 px-10 py-10 w-2/3">
           <div className="text-4xl font-bold text-slate-900 py-10 text-left ">
             Find the right price for your car{" "}
           </div>
