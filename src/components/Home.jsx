@@ -1,22 +1,23 @@
 import React from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.svg";
 
 const Home = () => {
   return (
-    <div className="bg-[#FBEAEB] h-screen w-full">
-      <div className="flex justify-center py-10">
-        <div id="image" className=" w-32">
-          <img src={logo} alt="logo" />
+    <div className="bg-gradient-to-b from-[#990011] to-[#FCF6F5] h-full w-full">
+      <div className="flex justify-center items-center py-10">
+        <div id="image" className="flex items-center ml-20 ">
+          <img className="w-32" src={logo} alt="logo" />
+          <h1 className="px-10 font-bold font-serif text-4xl">IIT(BHU), Varanasi</h1>
         </div>
       </div>
 
       <div className="h-full flex-col justify-center">
-        <div className="text-4xl font-bold text-black text-center">
+        <div className="text-4xl font-bold text-black py-10 text-center">
           Predicting the price of an old car using Machine Learning{" "}
         </div>
         <div className="grid grid-row-2 place-items-center ">
           <div>
-            <form className="flex flex-wrap jusify-equally py-7 capitalize">
+            <form className="grid grid-cols-4 justify-evenly py-7 capitalize">
               <div className="flex flex-col px-2">
                 <label className="text-2xl py-5" for="car_name">
                   car name
@@ -117,7 +118,7 @@ const Home = () => {
             </form>
           </div>
 
-          <button className="bg-[#2F3C7E] text-white text-2xl font-bold rounded-3xl px-4 py-4 w-56 hover:bg-blue-500">
+          <button className="bg-[#990011] text-white text-2xl font-bold rounded-3xl px-4 py-4 w-56 my-10 hover:bg-red-900   ">
             Predict
           </button>
         </div>
