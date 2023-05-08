@@ -1,7 +1,13 @@
 import React from "react";
 import logo from "../assets/logo.svg";
+import { useState } from "react";
 
 const Home = () => {
+  const [showTextBox, setShowTextBox] = useState(false);
+
+  const handleClick = () => {
+    setShowTextBox(!showTextBox);
+  };
   return (
     <div className="bg-gradient-to-b from-[#201E20] to-[#E0A96D] h-full w-full">
       <div className=" bg-[#E0A96D] flex ">
@@ -24,33 +30,32 @@ const Home = () => {
 
       <div className="flex">
         <div id="container" className="w-1/3 pl-8 my-20 capitalize">
-            <ol className="pt-10 list-disc" >
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter name of car</h1>
-                </li>
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter kms driven</h1>
-                </li>
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter fuel type</h1>
-                </li>
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter transmission</h1>
-                </li>
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter owner</h1>
-                </li>
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter manufacturer</h1>
-                </li>
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter engine</h1>
-                </li>
-                <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
-                    <h1>enter seats</h1>
-                </li>
-
-            </ol>
+          <ol className="pt-10 list-disc">
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter name of car</h1>
+            </li>
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter kms driven</h1>
+            </li>
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter fuel type</h1>
+            </li>
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter transmission</h1>
+            </li>
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter owner</h1>
+            </li>
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter manufacturer</h1>
+            </li>
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter engine</h1>
+            </li>
+            <li className="text-2xl font-bold text-black font-mono hover:text-white cursor-pointer pb-5">
+              <h1>enter seats</h1>
+            </li>
+          </ol>
         </div>
         <div className="flex-col justify-center mx-12 bg-[#DDC3A5] rounded-md my-10 h-4/5 px-10 py-10 w-2/3">
           <div className="text-4xl font-bold text-slate-900 py-10 text-left ">
@@ -159,9 +164,25 @@ const Home = () => {
               </form>
             </div>
             <div className=" items-center flex flex-col">
-              <button className="bg-[#990011] text-white text-2xl font-bold rounded-3xl px-4 py-4 w-56 my-10 hover:bg-red-900   ">
-                Predict
-              </button>
+              {!showTextBox && (
+                <button
+                  onClick={handleClick}
+                  className="bg-[#990011] text-white text-2xl font-bold rounded-3xl px-4 py-4 w-56 my-10 hover:bg-red-900   "
+                >
+                  Predict
+                </button>
+              )}
+
+              {showTextBox && (
+                <p className="bg-[#E0A96D] text-[#201E20] text-3xl p-2 mt-2 rounded-lg shadow-lg font-serif">
+                  random text
+                </p>
+              )}
+              {showTextBox && (
+                <button onClick={handleClick} className="bg-[#990011] text-white text-2xl font-bold rounded-3xl px-4 py-4 w-56 my-10 hover:bg-red-900   ">
+                    Reset 
+                </button>
+                )}
             </div>
           </div>
         </div>
