@@ -1,10 +1,17 @@
 import React from "react";
+import logo from "../assets/logo.png";
 
 const Home = () => {
   return (
     <div className="bg-[#FBEAEB] h-screen w-full">
-      <div className="justify-center h-full">
-        <div className="text-4xl font-bold text-black py-10 text-center">
+      <div className="flex justify-center py-10">
+        <div id="image" className=" w-32">
+          <img src={logo} alt="logo" />
+        </div>
+      </div>
+
+      <div className="h-full flex-col justify-center">
+        <div className="text-4xl font-bold text-black text-center">
           Predicting the price of an old car using Machine Learning{" "}
         </div>
         <div className="grid grid-row-2 place-items-center ">
@@ -39,7 +46,9 @@ const Home = () => {
                   Fuel Type
                 </label>
                 <select className="border-2 border-gray-400 rounded-3xl px-4 py-4 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                  <option value="" className="text-gray-400" >Select your Fuel Type</option>
+                  <option value="" className="text-gray-400">
+                    Select your Fuel Type
+                  </option>
                   <option value="Petrol">Petrol</option>
                   <option value="Diesel">Diesel</option>
                   <option value="Cng">CNG</option>
@@ -52,7 +61,7 @@ const Home = () => {
                   Transmission
                 </label>
                 <select className="border-2 border-gray-400 rounded-3xl px-4 py-4 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                <option value="" >Select your Transmission type </option>
+                  <option value="">Select your Transmission type </option>
                   <option value="Manual">Manual</option>
                   <option value="Automatic">Automatic</option>
                 </select>
